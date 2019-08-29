@@ -1,0 +1,25 @@
+management:
+  endpoints:
+    web.exposure:
+      include: health, env, info
+
+my-not-secret: notreallysecret
+
+
+# For running locally
+azure:
+  keyvault:
+    uri: https://xxx.vault.azure.net/
+    client-id: xxxx
+    client-key: xxxx
+
+
+---
+spring.profiles: cloud
+
+# running on PCF - read from VCAP service
+azure:
+  keyvault:
+    uri: ${vcap.services.azure-vault-service.credentials.vaultUri}
+    client-id: ${vcap.services.azure-vault-service.credentials.clientId}
+    client-key: ${vcap.services.azure-vault-service.credentials.clientSecret}

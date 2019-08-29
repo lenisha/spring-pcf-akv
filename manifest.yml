@@ -1,0 +1,7 @@
+---
+applications:
+- name: spring-akv
+  path: target/akv-0.0.1-SNAPSHOT.jar
+  buildpack: java_buildpack
+  services:
+   - azure-vault-service

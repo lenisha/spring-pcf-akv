@@ -1,0 +1,5 @@
+{
+  "clientId":"xxx",
+  "clientSecret":"xxx",
+  "vaultUri":"https://xxx.vault.azure.net"
+}
